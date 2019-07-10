@@ -1224,6 +1224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SciGraph: 
+  Button: {fileID: 1822041763499456374}
+  Image: {fileID: 3226186687683665485}
 --- !u!1 &3796269771289044866
 GameObject:
   m_ObjectHideFlags: 0

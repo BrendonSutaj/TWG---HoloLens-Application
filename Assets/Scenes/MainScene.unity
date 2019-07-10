@@ -284,6 +284,11 @@ PrefabInstance:
       propertyPath: drawPlanesMask
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7726669250670623083, guid: 9f1de40a7050639489078cb42ef3e49a,
+        type: 3}
+      propertyPath: destroyPlanesMask
+      value: 29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f1de40a7050639489078cb42ef3e49a, type: 3}
 --- !u!1 &258003642 stripped

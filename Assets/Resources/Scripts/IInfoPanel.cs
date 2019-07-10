@@ -76,7 +76,6 @@ public class IInfoPanel : MonoBehaviour
         gameObject.SetActive(true);
         meshPro.ForceMeshUpdate();
         gameObject.SetActive(false);
-        meshPro.ForceMeshUpdate();
     }
 
     /**
@@ -97,5 +96,13 @@ public class IInfoPanel : MonoBehaviour
         var meshPro = Description.GetComponent<TextMeshPro>();
         meshPro.pageToDisplay--;
         meshPro.ForceMeshUpdate();
+    }
+
+    /**
+    * Used to reset the InfoPanel to the first page again.
+    */
+    public void reset() {
+        var meshPro = Description.GetComponent<TextMeshPro>();
+        meshPro.pageToDisplay = 1;
     }
 }

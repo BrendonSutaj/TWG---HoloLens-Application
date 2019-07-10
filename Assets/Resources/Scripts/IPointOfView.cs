@@ -33,17 +33,26 @@ public class IPointOfView : MonoBehaviour
     */
     void Start()
     {
+        TriggeredOnce = false;
+        
         DeserializeXml();
-
-        // Pass the PaperInfo/SciGraph data to the InfoPanel/ImageHolder.
-        InfoPanel.GetComponent<IInfoPanel>().Paper          = Graph.PaperInfo.Paper;
-        ImageHolder.GetComponent<IImageHolder>().SciGraph   = Graph.PaperInfo.Paper.SciGraph;
 
         // Compute the right Distances from pov to groupd and from group to their respective nodes.
         ComputeDistances();
 
         // Load global value from Config.
         Distance = Config.POV_GROUP_DISTANCE;
+
+        // Pass the PaperInfo/SciGraph data to the InfoPanel/ImageHolder.
+        InfoPanel.GetComponent<IInfoPanel>().Paper          = Graph.PaperInfo.Paper;
+
+        // If the sciGraph file does not exist, or is even null, hide the button.
+        if (string.IsNullOrEmpty(Graph.PaperInfo.Paper.SciGraph) || !File.Exists(GetFilePath(Graph.PaperInfo.Paper.SciGraph.Trim()))) {
+            transform.Find("Menu/SciGraph").gameObject.SetActive(false);
+        } else {
+            ImageHolder.GetComponent<IImageHolder>().SciGraph = Graph.PaperInfo.Paper.SciGraph;
+            ImageHolder.GetComponent<IImageHolder>().createContent();
+        }
 
         InfoPanel.GetComponent<IInfoPanel>().createContent();
         deserializationIsDone = true;
@@ -219,7 +228,10 @@ public class IPointOfView : MonoBehaviour
     * Activates/Deactivates InfoPanel.
     */
     public void PaperInfoHandler()
-    {
+    {   // Resets the InfoPanel to page 1, if it is being currently deactivated.
+        if (InfoPanel.activeSelf) {
+            InfoPanel.GetComponent<IInfoPanel>().reset();
+        }
         InfoPanel.SetActive(!InfoPanel.activeSelf);
     }
 

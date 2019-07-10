@@ -50,6 +50,7 @@ public class IPaperNode : MonoBehaviour
         */
 
         InfoPanel.GetComponent<IInfoPanel>().createContent();
+        ImageHolder.GetComponent<IImageHolder>().createContent();
     }
 
 
@@ -110,6 +111,10 @@ public class IPaperNode : MonoBehaviour
     */
     public void paperInfoHandler()
     {
+        // Resets the InfoPanel to the first page, if it is currently being deactivated.
+        if (InfoPanel.activeSelf) {
+            InfoPanel.GetComponent<IInfoPanel>().reset();
+        }
         InfoPanel.SetActive(!InfoPanel.activeSelf);
     }
 
