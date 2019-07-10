@@ -69,25 +69,23 @@ public class IPointOfView : MonoBehaviour
             maxNodes = Math.Max(maxNodes, group.Paper.Count);
         }
 
-        Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(
-            Math.Max(1, Math.Round(0.5 / Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * maxNodes))), 2) + 0.01)
-        );
+        if (maxNodes == 1) {
+            Config.GROUP_PAPER_DISTANCE = 1;
+        } else {
+            Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(
+                Math.Max(1, Math.Round(0.6 / Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * (maxNodes - 1)))), 2) + 0.01)
+            );
+        }
 
         int m = Graph.Groups.Group.Count;
 
-        if (m == 1) {
+        if (m <= 2) {
             Config.POV_GROUP_DISTANCE = 1;
-        }
-
-        if (m == 2) {
-            Config.POV_GROUP_DISTANCE = Convert.ToSingle(
-                Math.Cos(Math.PI / 4 ) * (Config.GROUP_PAPER_DISTANCE + 0.25)
-            );
         }
 
         if (m > 2) {
             Config.POV_GROUP_DISTANCE = Convert.ToSingle(
-                Math.Max(1, Math.Round((0.5 + Config.GROUP_PAPER_DISTANCE) / Math.Sin(2 * Math.PI / m), 2) + 0.01)
+                Math.Max(1, Math.Round((0.6 + Config.GROUP_PAPER_DISTANCE) / Math.Sin(2 * Math.PI / m), 2) + 0.01)
             );
         }
 
