@@ -97,7 +97,7 @@ public class IGroupNode : MonoBehaviour
             }
             */
 
-            var phi = (Math.PI * 7 / 4) + (3 * Math.PI / (2 * (paperCount - 1))) * i;
+            var phi = (Math.PI * 13 / 8) + (7 * Math.PI / (4 * (paperCount - 1))) * i;
 
             /* Calculations, phi = Angle to the new Paper-Node.
              * Remember -- grpRotation is the World Rotation of the grp - 90° (That the grp has from the beginning of its instantiation)

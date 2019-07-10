@@ -73,7 +73,7 @@ public class IPointOfView : MonoBehaviour
             Config.GROUP_PAPER_DISTANCE = 1;
         } else {
             Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(
-                Math.Max(1, Math.Round(0.6 / Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * (maxNodes - 1)))), 2) + 0.01)
+                Math.Max(1, Math.Round(0.6 / Math.Sqrt(2 - 2 * Math.Cos(7 * Math.PI / (4 * (maxNodes - 1)))), 2) + 0.01)
             );
         }
 
