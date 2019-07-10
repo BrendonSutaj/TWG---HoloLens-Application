@@ -85,13 +85,19 @@ public class IGroupNode : MonoBehaviour
         for (int i = 0; i < paperCount; i++)
         {
             // // Calculations just like in POV before.
-            var phi = i * Math.PI * 3 / (2 * paperCount) + Math.PI / 2; // This is for a 270° equidistant split.
+            // This is for a 270° equidistant split.
+
+            //var phi = Math.PI / 2 + (3 * Math.PI / (2 * paperCount)) * i;
 
             // The angle has to stay in -45° - 225° range. 5*Math.PI/4 = 225°.
+            /*
             if (phi > 5 * Math.PI / 4 && phi < 7 * Math.PI / 4)
             {
                 phi = phi - 3 * Math.PI / 2;
             }
+            */
+
+            var phi = (Math.PI * 7 / 4) + (3 * Math.PI / (2 * (paperCount - 1))) * i;
 
             /* Calculations, phi = Angle to the new Paper-Node.
              * Remember -- grpRotation is the World Rotation of the grp - 90° (That the grp has from the beginning of its instantiation)

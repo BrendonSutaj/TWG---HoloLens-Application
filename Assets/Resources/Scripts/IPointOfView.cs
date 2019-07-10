@@ -68,9 +68,34 @@ public class IPointOfView : MonoBehaviour
         {
             maxNodes = Math.Max(maxNodes, group.Paper.Count);
         }
+
+        Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(
+            Math.Max(1, Math.Round(0.5 / Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * maxNodes))), 2) + 0.01)
+        );
+
+        int m = Graph.Groups.Group.Count;
+
+        if (m == 1) {
+            Config.POV_GROUP_DISTANCE = 1;
+        }
+
+        if (m == 2) {
+            Config.POV_GROUP_DISTANCE = Convert.ToSingle(
+                Math.Cos(Math.PI / 4 ) * (Config.GROUP_PAPER_DISTANCE + 0.25)
+            );
+        }
+
+        if (m > 2) {
+            Config.POV_GROUP_DISTANCE = Convert.ToSingle(
+                Math.Max(1, Math.Round((0.5 + Config.GROUP_PAPER_DISTANCE) / Math.Sin(2 * Math.PI / m), 2) + 0.01)
+            );
+        }
+
+        /*
         Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(Math.Max(1, Math.Round(1/Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * maxNodes))), 2)));
         Config.POV_GROUP_DISTANCE   = Convert.ToSingle(Math.Max(1, 
         Math.Round((Config.GROUP_PAPER_DISTANCE + 1) / Math.Sqrt(2 - 2 * Math.Cos(2 * Math.PI / Graph.Groups.Group.Count)))));
+        */
     }
 
     /**
@@ -99,7 +124,7 @@ public class IPointOfView : MonoBehaviour
         {
             Start();
         }
-
+ 
         // Run this function just once.
         if (TriggeredOnce)
         {
@@ -115,7 +140,7 @@ public class IPointOfView : MonoBehaviour
 
             // Calculations, phi = Angle to the new Group. -- exp(i*phi) = cos(phi) + i*sin(phi)
             // The Addition "+ Math.PI / 2" makes sure that a Group always spawns in front of the User.
-            var phi     = 2 * i * Math.PI / groupCount + Math.PI / 2;
+            var phi     = (Math.PI / 2) + (2 * Math.PI / groupCount) * i;
             var sinus   = Convert.ToSingle(Math.Sin(phi));
             var cosinus = Convert.ToSingle(Math.Cos(phi));
 
