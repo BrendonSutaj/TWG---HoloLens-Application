@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WalkableGraph>
+   <PaperInfo>
+      <Paper name="Paper_10.1007/bf01408588">
+         <DOI>10.1007/bf01408588</DOI>
+         <Abstract>In this paper we describe a fully implemented system for speech and natural language control of 3D animation and computer games. The experimental framework has features that have been emulated from the popular DOOM™ computer game. It implements an integrated parser based on a linguistic formalism tailored to the processing of the specific natural language instructions required to control a player character. This parser outputs structured message formats to the animation layer, which further interprets these messages to generate behaviours for the scene objects. We have found that interactive control significantly impacts on the behavioural interpretation of natural language semantics. Besides bringing stringent requirements in terms of response times for the natural language processing step, it determines the level of autonomy that the animated character should possess, which in turn influences the generation of behavioral scripts from natural language instructions.</Abstract>
+         <Authors>M. Cavazza, I. Palmer</Authors>
+         <Keywords>Animation, Games, Natural language, Virtual environments</Keywords>
+         <Title>Natural language control of interactive 3D animation and computer games</Title>
+         <Typology>journal article</Typology>
+         <Year>1999</Year>
+         <SciGraph>Natural_language_con.png</SciGraph>
+      </Paper>
+   </PaperInfo>
+   <Groups_Ref>
+      <Group name="interaction, models, interactive manipulation">
+         <Paper name="Paper_10.1007/978-3-7091-9433-1_13">
+            <DOI>10.1007/978-3-7091-9433-1_13</DOI>
+            <Abstract>The enhancement of a virtual reality environment with a speech interface is described. Some areas where the virtual reality environment benefits from the spoken modality are identified as well as some where the interpretation of natural language utterances benefits from being situated in a highly structured environment. The issue of interaction metaphors for this configuration of interface modalities is investigated.</Abstract>
+            <Authors>Jussi Karlgren, Ivan Bretan, Niklas Frost, Lars Jonsson</Authors>
+            <Keywords></Keywords>
+            <Title>Interaction Models, Reference, and Interactivity in Speech Interfaces to Virtual Environments</Title>
+            <Typology>book chapter</Typology>
+            <Year>1995</Year>
+            <SciGraph>Interaction_Models,_.png</SciGraph>
+         </Paper>
+         <Paper name="Paper_10.1111/1467-8659.00267">
+            <DOI>10.1111/1467-8659.00267</DOI>
+            <Abstract>There is a large body of research on motion control of legs in human models. However, they require specification of global paths in which to move. A method for automatically computing a global motion path for a human in 3D environment of obstacles is presented. Object space is discretized into a 3D grid of uniform cells and an optimal path is generated between two points as a discrete cell path. The grid is treated as graph with orthogonal links of uniform cost. A* search method is applied for path finding. By considering only the cells on the upper surface of objects on which human walks, a large portion of the grid is discarded from the search space, thus boosting efficiency. This is expected to be a higher level mechanism for various local foot placement methods in human animation.</Abstract>
+            <Authors>Srikanth Bandi, Daniel Thalmann</Authors>
+            <Keywords></Keywords>
+            <Title>Space Discretization for Efficient Human Navigation</Title>
+            <Typology>journal article</Typology>
+            <Year>1998</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+         <Paper name="Paper_10.1109/38.486678">
+            <DOI>10.1109/38.486678</DOI>
+            <Abstract>Our approach to scene generation capitalizes the expressive power of natural language by separating its aptness in specifying spatial relations from the difficulties of understanding text. We are implementing an object-placement system called Put that uses a combination of linguistic commands and direct manipulation. The system is language-based, meaning that its design and structure are guided by natural language. Our approach (inspired by research in cognitive linguistics) is to analyze the natural use of spatial relations, define a well-understood class of fundamental relationships, and gradually build a coherent and natural spatial-manipulation system. Just a few simple spatial relationships, such as in, on, and at, parameterized by a limited number of environmental variables can provide comfortable object manipulation. These natural commands can be used to quickly prototype a complex scene and constrain object placement. We believe that we have an extensible, predictable, and computationally feasible environment for object manipulation. We have focused first on spatial relationships because they are fundamental to many conceptual domains beyond object placement, including motion and time. These particular domains are very important to areas of computer graphics such as animation. Uses of spatial relationships in these areas can be quite complex. We briefly introduce the complexities of understanding spatial relations and summarize related work. Then we describe the core of the Put placement system, followed by its linguistic, procedural, and interactive interfaces. We conclude by discussing future enhancements to the system.</Abstract>
+            <Authors>S.R. Clay, J. Wilhelms</Authors>
+            <Keywords></Keywords>
+            <Title>Put: language-based interactive manipulation of objects</Title>
+            <Typology>journal article</Typology>
+            <Year>1996</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+         <Paper name="Paper_10.1109/ca.1994.323998">
+            <DOI>10.1109/ca.1994.323998</DOI>
+            <Abstract>The REALISM animation system encapsulates behavioural control mechanisms within the objects in a scene, offering a single interface to both modelling and animation. Libraries of actors allow creative skills to be focused on scene development and not individual object control. The progress of an animation sequence is defined by a controlling script. Individual object behaviour is defined by rules and constraints, themselves dynamic entities that can modify their own behaviour during the animation. Each element controls its own destiny which is guided but not dictated by the script. To reduce the communication overhead caused by the inter-object dialogue necessary for collision detection, a two stage process is implemented. This consists of a bounding volume check as the first stage, and objects communicating to resolve collisions as the second stage. The algorithm ensures that the workload is distributed evenly throughout the objects, guaranteeing a maximum limit to the workload per object.&lt;&gt;</Abstract>
+            <Authors>I.J. Palmer, R.L. Grimsdale</Authors>
+            <Keywords></Keywords>
+            <Title>REALISM: reusable elements for animation using local integrated simulation models</Title>
+            <Typology>proceedings article</Typology>
+            <Year></Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+      <Group name="improv">
+         <Paper name="Paper_10.1145/237170.237258">
+            <DOI>10.1145/237170.237258</DOI>
+            <Abstract></Abstract>
+            <Authors>Ken Perlin, Athomas Goldberg</Authors>
+            <Keywords></Keywords>
+            <Title>Improv</Title>
+            <Typology>proceedings article</Typology>
+            <Year>1996</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+      <Group name="tree adjunct grammars">
+         <Paper name="Paper_10.1016/s0022-0000(75)80019-5">
+            <DOI>10.1016/s0022-0000(75)80019-5</DOI>
+            <Abstract>In this paper, a tree generating system called a tree adjunct grammar is described and its formal properties are studied relating them to the tree generating systems of Brainerd (Information and Control 14 (1969), 217–231) and Rounds (Mathematical Systems Theory 4 (1970), 257–287) and to the recognizable sets and local sets discussed by Thatcher (Journal of Computer and System Sciences 1 (1967), 317–322; 4 (1970), 339–367) and Rounds. Linguistic relevance of these systems has been briefly discussed also.</Abstract>
+            <Authors>Aravind K. Joshi, Leon S. Levy, Masako Takahashi</Authors>
+            <Keywords></Keywords>
+            <Title>Tree adjunct grammars</Title>
+            <Typology>journal article</Typology>
+            <Year>1975</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+      <Group name="real-time virtual humans, say type computers, people say type">
+         <Paper name="Paper_10.1007/978-1-4471-3646-0_16">
+            <DOI>10.1007/978-1-4471-3646-0_16</DOI>
+            <Abstract>The last few years have seen great maturation in the computation speed and control methods needed to portray 3D virtual humans suitable for real interactive applications. Various dimensions of real-time virtual humans are considered, such as appearance and movement, autonomous action, and skills such as gesture, attention, and locomotion. A virtual human architecture includes low-level motor skills, mid-level PaT-Net parallel finite state machine controller, and a high-level conceptual action representation that can be used to drive virtual humans through complex tasks. This structure offers a deep connection between natural language instructions and animation control.</Abstract>
+            <Authors>Norman I. Badler, Rama Bindiganavale, Juliet Bourne, Jan Allbeck, Jianping Shi, Martha Palmer</Authors>
+            <Keywords></Keywords>
+            <Title>Real-Time Virtual Humans</Title>
+            <Typology>book chapter</Typology>
+            <Year>2000</Year>
+            <SciGraph>Real-Time_Virtual_Hu.png</SciGraph>
+         </Paper>
+         <Paper name="Paper_10.1007/3-540-49384-0_15">
+            <DOI>10.1007/3-540-49384-0_15</DOI>
+            <Abstract>Avatars and Artificial Actors in Virtual Environments can be controlled by speech, as an alternative to motion capture techniques. In this paper, we discuss some specific requirements for the successful implementation of speech-based control of guided actors. We describe our sublanguage approach to speech-based control and its associated parsing techniques, based on lexicalised grammars. After an introduction to the REALISM animation software, we report work in progress in the real-time processing of spoken commands based on the integration of speech processing in the REALISM control loop. We conclude by discussing the possible impact of voice-controlled artificial actors in interactive systems.</Abstract>
+            <Authors>Marc Cavazza, Ian Palmer, Steve Parnell</Authors>
+            <Keywords></Keywords>
+            <Title>Real-Time Requirements for the Implementation of Speech-Controlled Artificial Actors</Title>
+            <Typology>book chapter</Typology>
+            <Year>1998</Year>
+            <SciGraph>Real-Time_Requiremen.png</SciGraph>
+         </Paper>
+         <Paper name="Paper_10.1016/0020-7373(91)90034-5">
+            <DOI>10.1016/0020-7373(91)90034-5</DOI>
+            <Abstract>This study tested whether people can be shaped to use the vocabulary and phrase structure of a program's output in creating their own inputs. Occasional computer-users interacted with four versions of an inventory program ostensibly capable of understanding natural-language inputs. The four versions differed in the vocabulary and the phrase length presented on the subjects' computer screen. Within each version, the program's outputs were worded consistently and presented repetitively in the hope that subjects would use the outputs as a model for their inputs. Although not told so in advance, one-half of the subjects were restricted to input phrases identical to those used by their respective program (shaping condition), the other half were not (modeling condition). Additionally, one-half of the subjects communicated with the program by speaking, the other half by typing. The analysis of the verbal dependent variables revealed four noteworthy findings. First, users will model the length of a program's output. Second, it is easier for people to model and to be shaped to terse, as opposed to conversational, output phrases. Third, shaping users' inputs through error messages is more successful in limiting the variability in their language than is relying on them to model the program's outputs. Fourth, mode of communication and output vocabulary do not affect the degree to which modeling or shaping occur in person-computer interactions. Comparisons of pre- and post-experimental attitudes show that both restricted and unrestricted subjects felt significantly more positive toward computers after their interactions with the natural-language system. Other performance and attitude differences as well as implications for the development of natural-language processors are discussed.</Abstract>
+            <Authors>Elizabeth Zoltan-Ford</Authors>
+            <Keywords></Keywords>
+            <Title>How to get people to say and type what computers can understand</Title>
+            <Typology>journal article</Typology>
+            <Year>1991</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+      <Group name="instructions intentions expectations">
+         <Paper name="Paper_10.1016/0004-3702(94)00013-q">
+            <DOI>10.1016/0004-3702(94)00013-q</DOI>
+            <Abstract>Based on an ongoing attempt to integrate Natural Language instructions with human figure animation, we demonstrate that agents' understanding and use of instructions can complement what they can derive from the environment in which they act. We focus on two attitudes that contribute to agents' behavior—their intentions and their expectations—and shown how Natural Language instructions contribute to such attitudes in ways that complement the environment. We also show that instructions can require more than one context of interpretation and thus that agents' understanding of instructions can evolve as their activity progresses. A significant consequence is that Natural Language understanding in the context of behavior cannot simply be treated as “front end” processing, but rather must be integrated more deeply into the processes that guide an agent's behavior and respond to its perceptions.</Abstract>
+            <Authors>Bonnie Webber, Norman Badler, Barbara Di Eugenio, Chris Geib, Libby Levison, Michael Moore</Authors>
+            <Keywords></Keywords>
+            <Title>Instructions, intentions and expectations</Title>
+            <Typology>journal article</Typology>
+            <Year>1995</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+      <Group name="natural language, interfaces, using natural">
+         <Paper name="Paper_10.1016/b978-044481862-1.50073-x">
+            <DOI>10.1016/b978-044481862-1.50073-x</DOI>
+            <Abstract>Natural language interfaces (NLIs) can provide the most useful and efficient way for people to interact with computers. The goal for most natural language systems is to provide an interface that minimizes the training required for users. To most, this means a system that uses the words and syntax of a natural language such as English. There is, however, some disagreement as to the amount of understanding or flexibility required in the system. Research into NLIs continues, and a frequently asked question is how effective are these interfaces for human-computer communication. The chapter focuses on empirical methods that have been applied to the evaluation of limited NLIs and reviews the results of user studies. The discussion of empirical results uses the most liberal definition of natural language and looks at systems that provide flexible input languages that minimize training requirements. The discussion is limited to two study categories that report empirical results obtained from observing users interacting with these systems. The first category consists of prototype system studies developed in research environments. The second category consists of simulated systems studied in the laboratory that are designed to help identify desirable attributes of natural language systems.</Abstract>
+            <Authors>William C. Ogden, Philip Bernick</Authors>
+            <Keywords></Keywords>
+            <Title>Using Natural Language Interfaces</Title>
+            <Typology>book chapter</Typology>
+            <Year>1997</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+         <Paper name="Paper_10.3115/974557.974559">
+            <DOI>10.3115/974557.974559</DOI>
+            <Abstract>We describe our experiences building spoken language interfaces to four demonstration applications all involving 2- or 3-D spatial displays or gestural interactions: an air combat command and control simulation, an immersive VR tactical scenario viewer, a map-based air strike simulation tool with cartographic database, and a speech/gesture controller for mobile robots.</Abstract>
+            <Authors>Kenneth Wauchope, Stephanie Everett, Dennis Perzanowski, Elaine Marsh</Authors>
+            <Keywords></Keywords>
+            <Title>Natural language in four spatial interfaces</Title>
+            <Typology>proceedings article</Typology>
+            <Year>1997</Year>
+            <SciGraph></SciGraph>
+         </Paper>
+      </Group>
+   </Groups_Ref>
+</WalkableGraph>

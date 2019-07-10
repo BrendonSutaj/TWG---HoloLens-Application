@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <WalkableGraph>
+      <PaperInfo>
+        <Paper name = "Paper_DOI_00">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+      </PaperInfo>
+      <Groups_Ref>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+          <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+                  <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+        <Group name = "Group_Name_01">
+         <Paper name = "Paper_DOI_01">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> 
+            Der zweite Wortbestandteil -spiel ist wie in Kirchspiel im Spätmittelhochdeutschen volksetymologisch an Spiel angelehnt worden. Das Grundwort dazu lautete im Althochdeutschen spel für ‚Erzählung, Rede‘, im Altenglischen spell für Erzählung, Geschichte, Rede, Ausspruch‘[2] und Altnordischen spjall (auch ‚Zauberspruch‘) oder gotischen spill für ‚Sage, Fabel‘. Im Außergermanischen sind im Griechischen apeilḗ (ἀπειλή) ‚ruhmredige Verheißung, Drohung‘ sowie im Lettischen pelt ‚schmähen, verleumden, tadeln‘ vergleichbar, so dass von einer gemeinsamen Wurzel (s)pel- ‚laut, nachdrücklich sprechen‘ ausgegangen werden kann. In der englischen Sprache wird heute noch mit spell ‚Zauberwort‘ und gospel ‚Evangelium‘ (altenglisch: gōdspel ‚Evangelium‘, wörtlich ‚gute Botschaft‘) bezeichnet.
+
+            Das mit bī- (‚bei‘) zusammengesetzte westgermanische Kompositum bīspil ‚lehrhafter Spruch, Gleichnis‘ mittelhochdeutsch bīspel, mittelniederdeutsch bīspē̌l, bīspil, mittelniederländische bispel bezeichnete ‚zur Belehrung erdichtete Geschichte, Fabel, Gleichnis, Sprichwort‘; das Altenglische bīspell ‚Beispiel, Gleichnis‘ bedeutete ‚das nebenbei Erzählte‘. Martin Luther verwendet Beispiel vor allem im Sinne von ‚lehrreiches Faktum zur Nachahmung oder zur Abschreckung‘. Unter Einfluss vom lateinischen exemplum entwickelte sich seit dem 16. Jahrhundert die Bedeutung ‚Vorbild, Muster‘. Unter französischem Einfluss beruhen die Verbindungen zum Beispiel (nach par exemple) und ohne Beispiel (nach sans exemple) beispielsweise in dem Adverb ‚zum Beispiel‘ Ende des 17. Jahrhunderts sowie das Adjektiv beispiellos ‚einmalig, noch nicht dagewesen, unerhört‘ in der zweiten Hälfte des 18. Jahrhunderts und beispielhaft ‚vorbildlich, mustergültig‘ Anfang des 20. Jahrhunderts.[3]Siehe auch: Exemplar und Exemplarität
+             </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+         <Paper name = "Paper_DOI_02">
+            <DOI> DOI-OF-THE-PAPER </DOI>
+            <Abstract> TEXT-OF-THE-ABSTRACT </Abstract>
+            <Authors> AUTHOR01, AUTHOR02, AUTHOR03, etc. </Authors>
+            <Keywords> KEYWORD01, KEYWORD02, KEYWORD03, etc. </Keywords>
+            <Title> TITLE-OF-THE-PAPER </Title>
+            <Typology> TYPOLOGY </Typology>
+            <Year> YEAR-OF-PUBLICATION </Year>
+            <SciGraph> sciGraph.png </SciGraph>
+            <NewOrigin> data.xml </NewOrigin>
+         </Paper>
+        </Group>
+      </Groups_Ref>
+   </WalkableGraph>
