@@ -79,11 +79,23 @@ public class IPointOfView : MonoBehaviour
 
         int m = Graph.Groups.Group.Count;
 
-        if (m <= 2) {
+        if (m == 1 || m == 2) {
             Config.POV_GROUP_DISTANCE = 1;
         }
 
-        if (m > 2) {
+        if (m == 3) {
+            Config.POV_GROUP_DISTANCE = Convert.ToSingle(
+                (Config.GROUP_PAPER_DISTANCE + 0.6) * Math.Sin(37.5 * Math.PI / 180) / Math.Sin(2 * Math.PI / 3)
+            );
+        }
+
+        if (m == 4) {
+            Config.POV_GROUP_DISTANCE = Convert.ToSingle(
+                (Config.GROUP_PAPER_DISTANCE + 0.6) * Math.Cos(Math.PI / 8)
+            );
+        }
+
+        if (m > 4) {
             Config.POV_GROUP_DISTANCE = Convert.ToSingle(
                 Math.Max(1, Math.Round((0.6 + Config.GROUP_PAPER_DISTANCE) / Math.Sin(2 * Math.PI / m), 2) + 0.01)
             );
