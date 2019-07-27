@@ -42,7 +42,7 @@ public class IGroupNode : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         // This function should only be run once, can only be triggered by camera.
-        if (TriggeredOnce) 
+        if (TriggeredOnce || !other.CompareTag("MainCamera")) 
         {
             return;
         }

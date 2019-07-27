@@ -62,7 +62,7 @@ public class IPaperNode : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
 
         // Should trigger just once.
-        if (TriggeredOnce)
+        if (TriggeredOnce || !other.CompareTag("MainCamera")) 
         {
             return;
         }
