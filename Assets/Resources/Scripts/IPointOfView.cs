@@ -2,17 +2,20 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:14:27
+ * @modify date 2019-08-21 08:16:57
  * @desc [description]
  */
 
 #region USINGS
 using System;
+using System.Collections;
 using System.IO;
 using System.Text;
+using System.Xml;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 using static Config;
 #endregion
 
@@ -100,12 +103,6 @@ public class IPointOfView : MonoBehaviour
                 Math.Max(1, Math.Round((0.6 + Config.GROUP_PAPER_DISTANCE) / Math.Sin(2 * Math.PI / m), 2) + 0.01)
             );
         }
-
-        /*
-        Config.GROUP_PAPER_DISTANCE = Convert.ToSingle(Math.Max(1, Math.Round(1/Math.Sqrt(2 - 2 * Math.Cos(3 * Math.PI / (2 * maxNodes))), 2)));
-        Config.POV_GROUP_DISTANCE   = Convert.ToSingle(Math.Max(1, 
-        Math.Round((Config.GROUP_PAPER_DISTANCE + 1) / Math.Sqrt(2 - 2 * Math.Cos(2 * Math.PI / Graph.Groups.Group.Count)))));
-        */
     }
 
     /**
@@ -113,6 +110,12 @@ public class IPointOfView : MonoBehaviour
     */
     private void DeserializeXml()
     {
+        if (Config.URLUSED)
+        {
+            DeserializeXmlFromURL();
+            return;
+        }
+
         // Load the file from StreamingAssets as a String.
         var fileAsStr = GetFileData(Path);
 
@@ -120,6 +123,25 @@ public class IPointOfView : MonoBehaviour
         var memStream   = new MemoryStream(Encoding.UTF8.GetBytes(fileAsStr));
         var serializer  = new XmlSerializer(typeof(WalkableGraph));
         Graph = (WalkableGraph)serializer.Deserialize(memStream);
+    }
+
+    /**
+    * Deserializes the xml file from the URL given in the Config into the WalkableGraph Object "Graph" 
+    */
+    private IEnumerator DeserializeXmlFromURL()
+    {
+    
+        var www = new WWW(Config.URL);
+        yield return www;
+
+        if (www.error == null)
+        {
+            // XML deserialize into the WalkableGraph object "graph".
+            var memStream   = new MemoryStream(Encoding.UTF8.GetBytes(www.text));
+            var serializer  = new XmlSerializer(typeof(WalkableGraph));
+            Graph = (WalkableGraph)serializer.Deserialize(memStream);
+        }
+
     }
 
     /**
@@ -190,6 +212,9 @@ public class IPointOfView : MonoBehaviour
 
         // Pass the Group data to the group.
         groupController.Group = group;
+
+        // Pass the POV object to the group too.
+        groupController.pov = this.gameObject;
     }
 
 

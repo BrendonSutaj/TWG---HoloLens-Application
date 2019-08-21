@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:13:51
+ * @modify date 2019-08-21 08:17:06
  * @desc [description]
  */
 
@@ -40,6 +40,17 @@ public class IPaperMenu : MonoBehaviour
     */
     void Prep()
     {
+        // If the XML data is loaded from an URL instead, jump out of here.
+        if (Config.URLUSED)
+        {
+            // Instantiate the POV Object.
+            var pov = Instantiate((GameObject) Resources.Load("Prefabs/PointOfView", typeof(GameObject)));
+            pov.transform.position = new Vector3(0, Config.GRAPH_HEIGHT, 0);
+
+            gameObject.SetActive(false);
+        }
+
+
         // Get all .xml files from the streamingAssets directory.
         var infoAssetsDir   = new DirectoryInfo(Application.streamingAssetsPath);
         var xmlFiles        = infoAssetsDir.GetFiles("*.xml", SearchOption.AllDirectories);

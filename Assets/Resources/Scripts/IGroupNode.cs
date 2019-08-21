@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:12:32
+ * @modify date 2019-07-31 10:03:33
  * @desc [description]
  */
 
@@ -19,10 +19,11 @@ public class IGroupNode : MonoBehaviour
 
     // Fields.
     [SerializeField] public Group Group;
+    [SerializeField] public GameObject pov;
     [SerializeField] public GameObject Button;
 
     // Private Variables.
-    public bool TriggeredOnce              = false;
+    public bool TriggeredOnce               = false;
     private List<GameObject> childObjects   = new List<GameObject>();
     private float DISTANCE;
 
@@ -37,7 +38,7 @@ public class IGroupNode : MonoBehaviour
     /**
     * Triggered by Hololens-User walking onto it.
     * 
-    * Spawns Node Objects in a 270° (shifted by 45°) equidistant manner around the Group and assigns them their "Paper" - Data.
+    * Spawns Node Objects in a 315° equidistant manner around the Group and assigns them their "Paper" - Data.
     */
     private void OnTriggerEnter(Collider other) {
 
@@ -47,6 +48,16 @@ public class IGroupNode : MonoBehaviour
             return;
         }
         TriggeredOnce = true;
+
+        // Reset POV, ImageHolder and InfoPanel in case they are opened atm.
+        var povController = pov.GetComponent<IPointOfView>();
+        if (povController.ImageHolder.activeSelf) {
+            povController.ImageHolderHandler();
+        }
+
+        if (povController.InfoPanel.activeSelf) {
+            povController.PaperInfoHandler();
+        }
 
 
         // Deactivate other GrpChilds in case they are active and reset the trigger for the Group.
@@ -85,22 +96,11 @@ public class IGroupNode : MonoBehaviour
         for (int i = 0; i < paperCount; i++)
         {
             // // Calculations just like in POV before.
-            // This is for a 270° equidistant split.
-
-            //var phi = Math.PI / 2 + (3 * Math.PI / (2 * paperCount)) * i;
-
-            // The angle has to stay in -45° - 225° range. 5*Math.PI/4 = 225°.
-            /*
-            if (phi > 5 * Math.PI / 4 && phi < 7 * Math.PI / 4)
-            {
-                phi = phi - 3 * Math.PI / 2;
-            }
-            */
-
             var phi = (Math.PI * 13 / 8) + (7 * Math.PI / (4 * (paperCount - 1))) * i;
 
             /* Calculations, phi = Angle to the new Paper-Node.
-             * Remember -- grpRotation is the World Rotation of the grp - 90° (That the grp has from the beginning of its instantiation)
+             * Remember -- grpRotation is the World Rotation of the grp - 90° 
+               (That the grp has from the beginning of its instantiation)
              * Such that phi represents the angle in which direction the Paper-Node has to be spawned.
             */
             phi += grpRotation;

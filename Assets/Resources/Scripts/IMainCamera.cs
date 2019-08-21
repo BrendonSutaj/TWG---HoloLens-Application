@@ -2,10 +2,11 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:13:36
+ * @modify date 2019-07-31 10:13:15
  * @desc [description]
  */
 
+// THIS CLASS IS NOT USED ANYMORE, SINCE NEWORIGIN WAS DISREGARDED.
 using System.Collections.Generic;
 using UnityEngine;
 

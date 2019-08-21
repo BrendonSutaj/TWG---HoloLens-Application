@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:13:23
+ * @modify date 2019-07-31 10:13:08
  * @desc [description]
  */
 
@@ -72,7 +72,8 @@ public class IInfoPanel : MonoBehaviour
         var meshPro = Description.GetComponent<TextMeshPro>();
         meshPro.text = textToDisplay;
 
-        // This is required to update the textInfos, TextMeshPro doesn't do that immediately thats why i need to force the update like this.
+        // This is required to update the textInfos, TextMeshPro doesn't 
+        // do that immediately thats why i need to force the update like this.
         gameObject.SetActive(true);
         meshPro.ForceMeshUpdate();
         gameObject.SetActive(false);

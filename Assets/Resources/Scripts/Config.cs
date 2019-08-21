@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:11:46
+ * @modify date 2019-07-31 09:58:11
  * @desc [description]
  */
 
@@ -72,13 +72,19 @@ public class Config : MonoBehaviour
     }
 
 
+    // Dummy Values, don't really get used (Only in the Unity Editor.)
     #region GLOBAL VARIABLES
-    public static float GRAPH_HEIGHT         = -1.5f;    // Hololens-Height + GRAPH_HEIGHT = Walkable Graph Height. Dummy value if spatialProcessing does not work.
-    public static float POV_GROUP_DISTANCE   = 1.2f;     // The PointOfView to GroupNode distance. Dummy value, does not really get used.
-    public static float GROUP_PAPER_DISTANCE = 1.2f;     // The GroupNode to PaperNode distance. Dummy value, does not really get used.
+    public static float GRAPH_HEIGHT         = -1.5f;
+    public static float POV_GROUP_DISTANCE   = 1.2f;
+    public static float GROUP_PAPER_DISTANCE = 1.2f;
+
+    public static Boolean URLUSED = false;
+
+    public static String URL = "";
+    
     #endregion
 
-    #region SERIALIZATION
+
     /* XML / JSON Structure
 
         Root               Elements
@@ -87,13 +93,15 @@ public class Config : MonoBehaviour
         Groups_Ref      -> Group (List)
         PaperInfo       -> Paper
         Group           -> Paper (List) && name (Attribute)
-        Paper           -> DOI && Abstract && Authors && Keywords? && Title && Typology? && Year && SciGraph? && NewOrigin && name (Attribute)
+        Paper           -> DOI && Abstract && Authors && Keywords? && Title && Typology? 
+                               && Year && SciGraph? && NewOrigin && name (Attribute)
         ------------------------------------------
 
         ? := optional Data
 
         Encoding used: UTF8
     */
+    #region SERIALIZATION
 
     [Serializable()]
     [XmlRoot("WalkableGraph")]

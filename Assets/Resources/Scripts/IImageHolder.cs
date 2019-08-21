@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:12:58
+ * @modify date 2019-08-21 08:23:42
  * @desc [description]
  */
 
@@ -11,6 +11,7 @@ using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 #endregion
 
 public class IImageHolder : MonoBehaviour
@@ -36,18 +37,24 @@ public class IImageHolder : MonoBehaviour
             return;
         }
 
+        if (Config.URLUSED)
+        {
+            createContentFromURL();
+            return;
+        }
+
         // Load the sciGraph as a texture onto the Image-Object from the StreamingAssets folder of the device.
         var path            = @Path.Combine(Application.streamingAssetsPath, SciGraph.Trim());
 
         // If the path does not exist or the extension is unknown hide the SciGraph button and return.
         if (!ImageExtensions.Contains(Path.GetExtension(path))) {
-            // transform.parent.transform.Find("Menu/SciGraph").gameObject.SetActive(false);
             Button.SetActive(false);
             return;
         }
 
         var byteArray       = File.ReadAllBytes(path);
-        var sciGraph        = new Texture2D(1000, 1000);
+        var sciGraph        = new Texture2D(2, 2);
+        // LoadImage resets the (2, 2) Texture size to the actual size.
         sciGraph.LoadImage(byteArray);
 
         // Remove transparancy.
@@ -61,6 +68,35 @@ public class IImageHolder : MonoBehaviour
         Image.GetComponent<RawImage>().texture = sciGraph; 
     
         contentCreated = true;
+    }
+
+
+    private IEnumerator createContentFromURL()
+    {
+        // Scigraph is the URL now.
+        var www = new WWW(SciGraph.Trim());
+        yield return www;
+        var byteArray = www.bytes;
+
+        // Rest is similar.
+
+        var sciGraph        = new Texture2D(2, 2);
+        // LoadImage resets the (2, 2) Texture size to the actual size.
+        sciGraph.LoadImage(byteArray);
+
+        // Remove transparancy.
+        var pixels          = sciGraph.GetPixels();
+        for (int i = 0; i < pixels.Length; i++) {
+            pixels[i] = pixels[i].Equals(Color.clear) ? Color.white : pixels[i];
+        }
+        sciGraph.SetPixels(pixels);
+        sciGraph.Apply();
+
+        Image.GetComponent<RawImage>().texture = sciGraph; 
+    
+        contentCreated = true;
+
+
     }
 
 }

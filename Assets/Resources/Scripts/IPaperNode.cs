@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-10 16:14:15
+ * @modify date 2019-07-31 10:15:47
  * @desc [description]
  */
 
@@ -38,8 +38,7 @@ public class IPaperNode : MonoBehaviour
             ImageHolder.GetComponent<IImageHolder>().SciGraph = Paper.SciGraph;
         }
         
-        // If newOrigin is null or the file does not exist.
-        // CHANGED!!!!!!!!CHANGED!!!!!!!!CHANGED!!!!!!!!CHANGED!!!!!!!!
+        // CHANGED!!!
         // NEWORIGIN WAS REMOVED BECAUSE OF NEW XML SCHEME.
         transform.Find("Menu/NewOrigin").gameObject.SetActive(false);
         /*
@@ -125,8 +124,8 @@ public class IPaperNode : MonoBehaviour
     */
     public void newOriginHandler()
     {
+        // CHANGED!!!
         // Paper.NewOrigin.Trim();
-        // CHANGED!!!!!!!!CHANGED!!!!!!!!CHANGED!!!!!!!!
         string newOrigin = null;
 
         // Get all the objects with tag deactivate, to save the level.
