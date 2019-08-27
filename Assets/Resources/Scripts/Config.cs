@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-31 09:58:11
+ * @modify date 2019-08-27 17:37:11
  * @desc [description]
  */
 
@@ -48,6 +48,7 @@ public class Config : MonoBehaviour
         // This shouldn't happen. 
         // (Unity-Editor addition, needed because there is no room in the unity editor to be tracked, 
         // and I dont want to wait forever.)
+        // CAN BE DELETED AFTER EVERYTHING IS DONE!
         if (Time.realtimeSinceStartup > 13)
         {
             floorProcessingIsReady = true;
@@ -61,6 +62,7 @@ public class Config : MonoBehaviour
             GRAPH_HEIGHT = obj.FloorYPosition;
 
             // The X and Z value used here, is copied from the unity editor.
+            // StartButtons are not used anymore -> Update "NO NewOrigin"
             StartButtons.transform.position = new Vector3(1.085f, 1.25f + GRAPH_HEIGHT, 0.025f);
             floorProcessingIsReady = true;
             
@@ -78,8 +80,8 @@ public class Config : MonoBehaviour
     public static float POV_GROUP_DISTANCE   = 1.2f;
     public static float GROUP_PAPER_DISTANCE = 1.2f;
 
+    // SET URLUSED = TRUE IF YOU WANT TO ACTUALLY USE THE WEB INTERFACE.
     public static Boolean URLUSED = false;
-
     public static String URL = "";
     
     #endregion

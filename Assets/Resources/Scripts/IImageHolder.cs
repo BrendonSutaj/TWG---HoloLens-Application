@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-21 08:23:42
+ * @modify date 2019-08-27 17:41:09
  * @desc [description]
  */
 
@@ -54,12 +54,14 @@ public class IImageHolder : MonoBehaviour
 
         var byteArray       = File.ReadAllBytes(path);
         var sciGraph        = new Texture2D(2, 2);
-        // LoadImage resets the (2, 2) Texture size to the actual size.
+        // LoadImage resets the (2, 2) Texture size to the actual size of the image.
         sciGraph.LoadImage(byteArray);
 
         // Remove transparancy.
         var pixels          = sciGraph.GetPixels();
-        for (int i = 0; i < pixels.Length; i++) {
+        
+        for (int i = 0; i < pixels.Length; i++) 
+        {
             pixels[i] = pixels[i].Equals(Color.clear) ? Color.white : pixels[i];
         }
         sciGraph.SetPixels(pixels);
@@ -70,7 +72,9 @@ public class IImageHolder : MonoBehaviour
         contentCreated = true;
     }
 
-
+    /**
+    * Used to load the sciGraph from the given URL in "Config.cs" into the Image-Object.
+    */
     private IEnumerator createContentFromURL()
     {
         // Scigraph is the URL now.
@@ -86,7 +90,8 @@ public class IImageHolder : MonoBehaviour
 
         // Remove transparancy.
         var pixels          = sciGraph.GetPixels();
-        for (int i = 0; i < pixels.Length; i++) {
+        for (int i = 0; i < pixels.Length; i++) 
+        {
             pixels[i] = pixels[i].Equals(Color.clear) ? Color.white : pixels[i];
         }
         sciGraph.SetPixels(pixels);

@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-31 10:03:33
+ * @modify date 2019-08-27 17:41:18
  * @desc [description]
  */
 
@@ -20,7 +20,6 @@ public class IGroupNode : MonoBehaviour
     // Fields.
     [SerializeField] public Group Group;
     [SerializeField] public GameObject pov;
-    [SerializeField] public GameObject Button;
 
     // Private Variables.
     public bool TriggeredOnce               = false;
@@ -48,6 +47,9 @@ public class IGroupNode : MonoBehaviour
             return;
         }
         TriggeredOnce = true;
+
+        // Play Sound, whenever the group is entered and Nodes are spawned.
+        gameObject.GetComponent<AudioSource>().Play();
 
         // Reset POV, ImageHolder and InfoPanel in case they are opened atm.
         var povController = pov.GetComponent<IPointOfView>();

@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-31 10:13:08
+ * @modify date 2019-08-27 18:14:20
  * @desc [description]
  */
 
@@ -16,6 +16,8 @@ public class IInfoPanel : MonoBehaviour
 {
     [SerializeField] public Paper Paper;
     [SerializeField] public GameObject Title, Description, PreviousPage, NextPage;
+
+    private string headerColor = "#2949B0";
 
 
     /**
@@ -52,25 +54,23 @@ public class IInfoPanel : MonoBehaviour
             return;
         }
 
+        var keyAbsent = string.IsNullOrEmpty(keyWords);
+        var typAbsent = string.IsNullOrEmpty(typology);
+
         // Set the Title.
         Title.GetComponent<TextMeshPro>().text = title.Trim();
 
         // Set the Description.
-        var textToDisplay = "";
-        textToDisplay += string.Format("<u><b><color=#2949B0>Authors:</color></b></u>\n{0}\n", authors.Trim());     // Authors
-        textToDisplay += (!string.IsNullOrEmpty(keyWords))  ? string.Format("<u><b><color=#2949B0>Keywords:</color></b></u>\n{0}\n", keyWords.Trim())   // Keywords?
-                                                            : "";
-        textToDisplay += "<pos=0%><u><b><color=#2949B0>Published:</color></b></u></pos> ";
-        textToDisplay += (!string.IsNullOrEmpty(typology))  ? "<pos=50%><u><b><color=#2949B0>Typology:</color></b></u></pos>\n" // Typology?
-                                                            : "\n";
-        textToDisplay += string.Format("<pos=0%>{0}</pos>", year.Trim());   // Year
-        textToDisplay += (!string.IsNullOrEmpty(typology))  ? string.Format("<pos=50%>{0}</pos>\n", typology.Trim())
-                                                            : "\n";
-        textToDisplay += string.Format("<u><b><color=#2949B0>Abstract:</color></b></u>\n{0}", abs.Trim());  // Abstract
-
+        var displayedText   = string.Format("{0}\n{1}\n", header("Authors:"), authors.Trim()); // Authors
+            displayedText  += !keyAbsent ? string.Format("{0}\n{1}\n", header("Keywords:"), keyWords.Trim()) : ""; // Keywords
+            displayedText  += "<pos=0%>" + header("Published:") + "</pos>"; // Year-Header
+            displayedText  += !typAbsent ? "<pos=50%>" + header("Typology:") + "</pos>\n" : "\n"; // Typology-Header
+            displayedText  += string.Format("<pos=0%>{0}</pos>", year.Trim());   // Year
+            displayedText  += !typAbsent ? string.Format("<pos=50%>{0}</pos>\n", typology.Trim()) : "\n"; // Typology
+            displayedText  += string.Format("{0}\n{1}", header("Abstract:"), abs.Trim()); // Abstract
 
         var meshPro = Description.GetComponent<TextMeshPro>();
-        meshPro.text = textToDisplay;
+        meshPro.text = displayedText;
 
         // This is required to update the textInfos, TextMeshPro doesn't 
         // do that immediately thats why i need to force the update like this.
@@ -78,6 +78,40 @@ public class IInfoPanel : MonoBehaviour
         meshPro.ForceMeshUpdate();
         gameObject.SetActive(false);
     }
+
+    /**
+    * Helper function to make the string assignments more readable.
+    */
+    private string colorize(string text, string color)
+    {
+        return string.Format("<color={0}>{1}</color>", color, text);
+    }
+
+    /**
+    * Helper function to make the string assignments more readable.
+    */
+    private string bold(string text)
+    {
+        return string.Format("<b>{0}</b>", text);
+    }
+
+    /**
+    * Helper function to make the string assignments more readable.
+    */
+    private string underline(string text)
+    {
+        return string.Format("<u>{0}</u>", text);
+    }
+
+    /**
+    * Helper function to make the string assignments more readable.
+    */
+    private string header(string text)
+    {
+        return underline(bold(colorize(text, headerColor)));
+    }
+
+
 
     /**
     * Used as NextPage-Button Eventhandler.

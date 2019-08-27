@@ -372,20 +372,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 271034298}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &363598403
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363598402}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!54 &363598404
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -427,8 +413,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.8
-  m_Center: {x: 0, y: -0.5, z: 0}
+  m_Radius: 0.3
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &417510385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,6 +590,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388203600318699703, guid: 30d9bef33ff4f3c499722f5f36680792,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189492113624991765, guid: 30d9bef33ff4f3c499722f5f36680792,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2012254973316102802, guid: 30d9bef33ff4f3c499722f5f36680792, type: 3}
@@ -1023,6 +1019,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.029
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735948081224403485, guid: f3dd90595da809447a3896a6a40e5d32,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3dd90595da809447a3896a6a40e5d32, type: 3}

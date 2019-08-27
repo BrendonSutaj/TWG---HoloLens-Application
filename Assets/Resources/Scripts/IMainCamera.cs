@@ -2,11 +2,13 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-07-31 10:13:15
+ * @modify date 2019-08-27 18:18:05
  * @desc [description]
  */
 
 // THIS CLASS IS NOT USED ANYMORE, SINCE NEWORIGIN WAS DISREGARDED.
+// THE ONLY USE IS TO TRACK WHAT OBJECTS ARE ACTIVE ATM.
+// DELETING THIS SCRIPT NEEDS REPLACEMENT OF ACTIVEGROUP AND CHILDS. --> Config maybe?
 using System.Collections.Generic;
 using UnityEngine;
 
