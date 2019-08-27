@@ -1,9 +1,8 @@
 # TWG---HoloLens-Application
 
-The Walkable Graph (TWG) is an augmented reality (AR) application, that uses XML documents to automatically create AR content in form of walkable graphs in an AR environment.
+The Walkable Graph (TWG) is an Augmented Reality (AR) application, that uses XML documents to automatically create AR content in form of walkable graphs in an AR environment.
+Details about the kind of content processed and how the graphs are computed, can be read in my [Bachelor Thesis](https://github.com/BrendonSutaj/Bachelor-Thesis) in more detail.
 
-
-![alt text](http://url/to/img.png)
 
 ## Getting Started
 
@@ -29,3 +28,8 @@ The Walkable Graph (TWG) is an augmented reality (AR) application, that uses XML
 ## Authors
 
 * **Brendon Sutaj** 
+
+## Some Images seen from the HoloLens
+<img src="/Images/graph.jpg" width="500" alt="The Walkable Graph">
+<img src="/Images/paperInfo.jpg" width="500" alt="Paperinfo">
+<img src="/Images/sciGraph.jpg" width="500" alt="Scigraph">
