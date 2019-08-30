@@ -227,8 +227,19 @@ public class IGroupNode : MonoBehaviour
         lineRenderer.SetPosition(0, from);
         lineRenderer.SetPosition(1, to);
 
+        // Little Addition to make it look even cooler!
+        var lineTop     = Instantiate((GameObject) Resources.Load("Prefabs/LineTop", typeof(GameObject)));
+        var rendererTop = lineTop.GetComponent<LineRenderer>();
+
+        var newFrom = new Vector3(from.x, from.y + 0.005f, from.z);
+        var newTo   = new Vector3(to.x, to.y + 0.005f, to.z);
+
+        rendererTop.SetPosition(0, newFrom);
+        rendererTop.SetPosition(1, newTo);
+
+
         // Spawn the Text onto the line at the half distance of the line.
-        spawnTextOnLine(lineRenderer, paperTitle);
+        spawnTextOnLine(rendererTop, paperTitle);
 
         // Save the instantiated object as a childObject.
         childObjects.Add(lineObj);
@@ -246,7 +257,7 @@ public class IGroupNode : MonoBehaviour
         var lineEnd     = lineRenderer.GetPosition(1);
         var lineTextobj = Instantiate((GameObject) Resources.Load("Prefabs/LineText", typeof(GameObject)));
 
-        lineTextobj.transform.position = new Vector3((lineStart.x + lineEnd.x) / 2, transform.localPosition.y, (lineStart.z + lineEnd.z) / 2);
+        lineTextobj.transform.position = new Vector3((lineStart.x + lineEnd.x) / 2, transform.localPosition.y + 0.05f, (lineStart.z + lineEnd.z) / 2);
         lineTextobj.transform.Find("Text").GetComponent<TextMeshPro>().text = text;
 
         // Save the instantiated object as a childObject.

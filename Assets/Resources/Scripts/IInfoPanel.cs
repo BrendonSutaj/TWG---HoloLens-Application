@@ -64,9 +64,9 @@ public class IInfoPanel : MonoBehaviour
         var displayedText   = string.Format("{0}\n{1}\n", header("Authors:"), authors.Trim()); // Authors
             displayedText  += !keyAbsent ? string.Format("{0}\n{1}\n", header("Keywords:"), keyWords.Trim()) : ""; // Keywords
             displayedText  += "<pos=0%>" + header("Published:") + "</pos>"; // Year-Header
-            displayedText  += !typAbsent ? "<pos=50%>" + header("Typology:") + "</pos>\n" : "\n"; // Typology-Header
+            displayedText  += !typAbsent ? " <pos=50%>" + header("Typology:") + "</pos>\n" : "\n"; // Typology-Header
             displayedText  += string.Format("<pos=0%>{0}</pos>", year.Trim());   // Year
-            displayedText  += !typAbsent ? string.Format("<pos=50%>{0}</pos>\n", typology.Trim()) : "\n"; // Typology
+            displayedText  += !typAbsent ? string.Format(" <pos=50%>{0}</pos>\n", typology.Trim()) : "\n"; // Typology
             displayedText  += string.Format("{0}\n{1}", header("Abstract:"), abs.Trim()); // Abstract
 
         var meshPro = Description.GetComponent<TextMeshPro>();

@@ -48,6 +48,7 @@ public class IPaperMenu : MonoBehaviour
             pov.transform.position = new Vector3(0, Config.GRAPH_HEIGHT, 0);
 
             gameObject.SetActive(false);
+            return;
         }
 
 
