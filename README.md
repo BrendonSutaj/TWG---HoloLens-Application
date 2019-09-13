@@ -31,5 +31,3 @@ Details about the kind of content processed and how the graphs are computed, can
 
 ## Some Images seen from the HoloLens
 <img src="/Images/TWG.png" width="500" alt="The Walkable Graph">
-<img src="/Images/InfoPanel.png" width="500" alt="Paperinfo">
-<img src="/Images/sciGraph.jpg" width="500" alt="Scigraph">
