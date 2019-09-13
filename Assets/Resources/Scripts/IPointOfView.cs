@@ -2,21 +2,21 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 18:17:49
+ * @modify date 2019-09-12 23:52:28
  * @desc [description]
  */
 
 #region USINGS
 using System;
-using System.Collections;
 using System.IO;
 using System.Text;
-using System.Xml;
 using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 using static Config;
+using System.Collections;
+using UnityEngine.Networking;
+using System.Xml;
 #endregion
 
 public class IPointOfView : MonoBehaviour
@@ -28,6 +28,7 @@ public class IPointOfView : MonoBehaviour
 
     // Private Variables.
     private WalkableGraph Graph;
+
     private float Distance;
     private bool deserializationIsDone = false;
 
@@ -36,9 +37,12 @@ public class IPointOfView : MonoBehaviour
     */
     void Start()
     {
-        TriggeredOnce = false;
         
         DeserializeXml();
+
+        if (Config.URLUSED) {
+            return;
+        }
 
         // Compute the right Distances from pov to groupd and from group to their respective nodes.
         ComputeDistances();
@@ -53,12 +57,28 @@ public class IPointOfView : MonoBehaviour
         if (string.IsNullOrEmpty(Graph.PaperInfo.Paper.SciGraph) || !File.Exists(GetFilePath(Graph.PaperInfo.Paper.SciGraph.Trim()))) {
             transform.Find("Menu/SciGraph").gameObject.SetActive(false);
         } else {
+            ImageHolder.SetActive(true);
             ImageHolder.GetComponent<IImageHolder>().SciGraph = Graph.PaperInfo.Paper.SciGraph;
             ImageHolder.GetComponent<IImageHolder>().createContent();
+            ImageHolder.SetActive(false);
         }
 
+        InfoPanel.SetActive(true);
         InfoPanel.GetComponent<IInfoPanel>().createContent();
+        InfoPanel.SetActive(false);
+
         deserializationIsDone = true;
+    }
+
+    void Update() {
+        if (TriggeredOnce) {
+            return;
+        }
+
+        if (deserializationIsDone && Graph != null) {
+            TriggeredOnce = true;
+            GenerateGraph();
+        }
     }
 
     /**
@@ -112,12 +132,12 @@ public class IPointOfView : MonoBehaviour
     {
         if (Config.URLUSED)
         {
-            DeserializeXmlFromURL();
+            StartCoroutine(DeserializeXmlFromURL());
             return;
         }
 
         // Load the file from StreamingAssets as a String.
-        var fileAsStr = GetFileData(Path);
+        var fileAsStr   = GetFileData(Path);
 
         // XML deserialize into the WalkableGraph object "graph".
         var memStream   = new MemoryStream(Encoding.UTF8.GetBytes(fileAsStr));
@@ -130,18 +150,40 @@ public class IPointOfView : MonoBehaviour
     */
     private IEnumerator DeserializeXmlFromURL()
     {
-    
-        var www = new WWW(Config.URL);
-        yield return www;
+        using(UnityWebRequest www = UnityWebRequest.Get(Config.URL + Config.XMLNAME)) {
+            yield return www.SendWebRequest();
 
-        if (www.error == null)
-        {
             // XML deserialize into the WalkableGraph object "graph".
-            var memStream   = new MemoryStream(Encoding.UTF8.GetBytes(www.text));
+            var memStream   = new MemoryStream(www.downloadHandler.data);
             var serializer  = new XmlSerializer(typeof(WalkableGraph));
             Graph = (WalkableGraph)serializer.Deserialize(memStream);
-        }
 
+
+            // Compute the right Distances from pov to groupd and from group to their respective nodes.
+            ComputeDistances();
+
+            // Load global value from Config.
+            Distance = Config.POV_GROUP_DISTANCE;
+
+            // Pass the PaperInfo/SciGraph data to the InfoPanel/ImageHolder.
+            InfoPanel.GetComponent<IInfoPanel>().Paper          = Graph.PaperInfo.Paper;
+
+
+            InfoPanel.SetActive(true);
+            InfoPanel.GetComponent<IInfoPanel>().createContent();
+            InfoPanel.SetActive(false);
+
+            // If the sciGraph file does not exist, or is even null, hide the button.
+            if (string.IsNullOrEmpty(Graph.PaperInfo.Paper.SciGraph)) {
+                transform.Find("Menu/SciGraph").gameObject.SetActive(false);
+            } else {
+                ImageHolder.SetActive(true);
+                ImageHolder.GetComponent<IImageHolder>().SciGraph = Graph.PaperInfo.Paper.SciGraph;
+                StartCoroutine(ImageHolder.GetComponent<IImageHolder>().createContentFromURL());
+            }
+
+            deserializationIsDone = true;
+        }
     }
 
     /**
@@ -150,19 +192,8 @@ public class IPointOfView : MonoBehaviour
     * Spawns Group Objects in a 360° equidistant manner around the POV and assigns them their "Group" - Data.
     * (Euler Function)
     */
-    private void OnTriggerEnter(Collider other) 
+    private void GenerateGraph() 
     {
-        if (!deserializationIsDone)
-        {
-            Start();
-        }
- 
-        // Run this function just once.
-        if (TriggeredOnce)
-        {
-            return;
-        }
-        TriggeredOnce = true;
 
 
         var groupCount  = Graph.Groups.Group.Count;

@@ -541,19 +541,20 @@ PlayerSettings:
   allowUnsafeCode: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Metro: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template3D
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: C:\Users\BrendonSutaj\Desktop\Unity\projects\TWG\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
   metroCertificateNotAfter: 80bc1229f42ed601
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: TWG
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -572,17 +573,17 @@ PlayerSettings:
       Appointments: False
       BackgroundMediaPlayback: False
       BlockedChatMessages: False
-      Bluetooth: False
+      Bluetooth: True
       Chat: False
       CodeGeneration: False
       Contacts: False
       EnterpriseAuthentication: False
       HumanInterfaceDevice: False
       InputInjectionBrokered: False
-      InternetClient: False
-      InternetClientServer: False
+      InternetClient: True
+      InternetClientServer: True
       Location: False
-      LowLevelDevices: False
+      LowLevelDevices: True
       Microphone: False
       MusicLibrary: False
       Objects3D: False
@@ -600,7 +601,7 @@ PlayerSettings:
       SpatialPerception: True
       SystemManagement: False
       UserAccountInformation: False
-      UserDataTasks: False
+      UserDataTasks: True
       UserNotificationListener: False
       VideosLibrary: False
       VoipCall: False
@@ -614,7 +615,9 @@ PlayerSettings:
     Team: False
     Xbox: False
   metroFTAName: 
-  metroFTAFileTypes: []
+  metroFTAFileTypes:
+  - contentType: 
+    fileType: .xml
   metroProtocolName: 
   metroCompilationOverrides: 1
   XboxOneProductId: 

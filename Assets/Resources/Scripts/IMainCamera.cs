@@ -23,14 +23,6 @@ public class IMainCamera : MonoBehaviour
     private List<List<GameObject>> savedLevels = new List<List<GameObject>>();
     private int level = 0;
 
-    /**
-    * This function is used to set the prevPaper button to active if level > 0 and
-    * sets the nextPaper button to active if the current level is < savedLevels.Count - 1.
-    */
-    private void Update() {
-        Prev.SetActive(level > 0);
-        Next.SetActive(level < savedLevels.Count - 1);
-    }
 
 
     /**

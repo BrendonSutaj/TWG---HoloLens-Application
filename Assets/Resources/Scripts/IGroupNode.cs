@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 17:41:18
+ * @modify date 2019-09-12 23:52:50
  * @desc [description]
  */
 
@@ -243,6 +243,7 @@ public class IGroupNode : MonoBehaviour
 
         // Save the instantiated object as a childObject.
         childObjects.Add(lineObj);
+        childObjects.Add(lineTop);
     }
 
 

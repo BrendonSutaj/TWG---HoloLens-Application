@@ -2,17 +2,17 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 17:37:11
+ * @modify date 2019-09-12 22:49:25
  * @desc [description]
  */
 
 
 #region USINGS
-using System.Collections.Generic;
-using UnityEngine;
 using System;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Collections.Generic;
+using UnityEngine;
 using HoloToolkit.Unity.SpatialMapping;
 #endregion
 
@@ -27,7 +27,7 @@ public class Config : MonoBehaviour
     // The graph_height variable stores the inital height of the spatialprocessing script.
     private float floorYInitialValue;
     public static bool floorProcessingIsReady = false;
-    public GameObject SpatialMapping, SpatialProcessing, StartButtons;
+    public GameObject SpatialMapping, SpatialProcessing;
 
     // Used to get the inital graph_height value.
     private void Start() {
@@ -45,10 +45,7 @@ public class Config : MonoBehaviour
             return;
         }
 
-        // This shouldn't happen. 
-        // (Unity-Editor addition, needed because there is no room in the unity editor to be tracked, 
-        // and I dont want to wait forever.)
-        // CAN BE DELETED AFTER EVERYTHING IS DONE!
+        // UNITY EDITOR
         if (Time.realtimeSinceStartup > 13)
         {
             floorProcessingIsReady = true;
@@ -56,14 +53,10 @@ public class Config : MonoBehaviour
         }
         
         // Store the graphHeight, notify being ready and destroy spatialMapping and spatialProcessing.
-        var obj = SpatialProcessing.GetComponent<SurfaceMeshesToPlanes>();
-        if (obj.FloorYPosition != floorYInitialValue)
+        var updatedYPosition = SpatialProcessing.GetComponent<SurfaceMeshesToPlanes>().FloorYPosition;
+        if (updatedYPosition != floorYInitialValue)
         {
-            GRAPH_HEIGHT = obj.FloorYPosition;
-
-            // The X and Z value used here, is copied from the unity editor.
-            // StartButtons are not used anymore -> Update "NO NewOrigin"
-            StartButtons.transform.position = new Vector3(1.085f, 1.25f + GRAPH_HEIGHT, 0.025f);
+            GRAPH_HEIGHT = updatedYPosition;
             floorProcessingIsReady = true;
             
             // Deactivate SM and SP, to avoid nullpointer exceptions.
@@ -80,10 +73,16 @@ public class Config : MonoBehaviour
     public static float POV_GROUP_DISTANCE   = 1.2f;
     public static float GROUP_PAPER_DISTANCE = 1.2f;
 
+    public static int MAX_DISPLAYED_CHARS    = 12;
+
     // SET URLUSED = TRUE IF YOU WANT TO ACTUALLY USE THE WEB INTERFACE.
-    public static Boolean URLUSED = false;
-    public static String URL = "";
-    
+    public static Boolean URLUSED = true;
+    public static String URL = @"http://brendon-sutaj.de/hololens/";
+
+    public static String XMLNAME = "";
+
+    public static String REGNAME = "Register.txt";
+        
     #endregion
 
 
@@ -174,13 +173,6 @@ public class Config : MonoBehaviour
 
         [XmlElement("SciGraph")]
         public String SciGraph      {get; set; }
-
-        /*
-        // NewOrigin was removed from the XML-Scheme.
-
-        [XmlElement("NewOrigin")]
-        public String NewOrigin     {get; set; }
-        */
 
         [XmlAttribute("name")]
         public String PaperName     {get; set; }

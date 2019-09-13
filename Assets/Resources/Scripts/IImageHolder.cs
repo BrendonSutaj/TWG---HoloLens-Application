@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 17:41:09
+ * @modify date 2019-09-13 00:01:38
  * @desc [description]
  */
 
@@ -12,6 +12,7 @@ using System.IO;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.Networking;
 #endregion
 
 public class IImageHolder : MonoBehaviour
@@ -39,7 +40,7 @@ public class IImageHolder : MonoBehaviour
 
         if (Config.URLUSED)
         {
-            createContentFromURL();
+            StartCoroutine(createContentFromURL());
             return;
         }
 
@@ -75,33 +76,33 @@ public class IImageHolder : MonoBehaviour
     /**
     * Used to load the sciGraph from the given URL in "Config.cs" into the Image-Object.
     */
-    private IEnumerator createContentFromURL()
+    public IEnumerator createContentFromURL()
     {
-        // Scigraph is the URL now.
-        var www = new WWW(SciGraph.Trim());
-        yield return www;
-        var byteArray = www.bytes;
 
-        // Rest is similar.
+        using(UnityWebRequest www = UnityWebRequestTexture.GetTexture(Config.URL + SciGraph.Trim())) {
+            yield return www.SendWebRequest();
 
-        var sciGraph        = new Texture2D(2, 2);
-        // LoadImage resets the (2, 2) Texture size to the actual size.
-        sciGraph.LoadImage(byteArray);
+            // XML deserialize into the WalkableGraph object "graph".
+            var byteArray = www.downloadHandler.data;
 
-        // Remove transparancy.
-        var pixels          = sciGraph.GetPixels();
-        for (int i = 0; i < pixels.Length; i++) 
-        {
-            pixels[i] = pixels[i].Equals(Color.clear) ? Color.white : pixels[i];
+            // Rest is similar.
+            var sciGraph        = new Texture2D(2, 2);
+            // LoadImage resets the (2, 2) Texture size to the actual size.
+            sciGraph.LoadImage(byteArray);
+
+            // Remove transparancy.
+            var pixels          = sciGraph.GetPixels();
+            for (int i = 0; i < pixels.Length; i++) 
+            {
+                pixels[i] = pixels[i].Equals(Color.clear) ? Color.white : pixels[i];
+            }
+            sciGraph.SetPixels(pixels);
+            sciGraph.Apply();
+
+            Image.GetComponent<RawImage>().texture = sciGraph; 
+            gameObject.SetActive(false);
+            contentCreated = true;
         }
-        sciGraph.SetPixels(pixels);
-        sciGraph.Apply();
-
-        Image.GetComponent<RawImage>().texture = sciGraph; 
-    
-        contentCreated = true;
-
-
     }
 
 }

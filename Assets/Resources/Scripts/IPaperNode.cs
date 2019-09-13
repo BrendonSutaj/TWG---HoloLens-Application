@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 18:17:55
+ * @modify date 2019-09-12 23:55:56
  * @desc [description]
  */
 
@@ -32,7 +32,7 @@ public class IPaperNode : MonoBehaviour
         InfoPanel.GetComponent<IInfoPanel>().Paper = Paper;
 
         // If the sciGraph file does not exist, or is even null, hide the button.
-        if (string.IsNullOrEmpty(Paper.SciGraph) || !File.Exists(GetFilePath(Paper.SciGraph.Trim()))) {
+        if (string.IsNullOrEmpty(Paper.SciGraph)) {
             transform.Find("Menu/SciGraph").gameObject.SetActive(false);
         } else {
             ImageHolder.GetComponent<IImageHolder>().SciGraph = Paper.SciGraph;
@@ -41,15 +41,19 @@ public class IPaperNode : MonoBehaviour
         // CHANGED!!!
         // NEWORIGIN WAS REMOVED BECAUSE OF NEW XML SCHEME.
         transform.Find("Menu/NewOrigin").gameObject.SetActive(false);
-        /*
-        if (string.IsNullOrEmpty(Paper.NewOrigin) || !File.Exists(GetFilePath(Paper.SciGraph.Trim())))
-        {
-            transform.Find("Menu/NewOrigin").gameObject.SetActive(false);
-        }
-        */
 
+        InfoPanel.SetActive(true);
         InfoPanel.GetComponent<IInfoPanel>().createContent();
-        ImageHolder.GetComponent<IImageHolder>().createContent();
+        InfoPanel.SetActive(false);
+
+        ImageHolder.SetActive(true);
+        if (Config.URLUSED) {
+            StartCoroutine(ImageHolder.GetComponent<IImageHolder>().createContentFromURL());
+        } else {
+            ImageHolder.GetComponent<IImageHolder>().createContent();
+        }
+        
+        ImageHolder.SetActive(false);
     }
 
 

@@ -2,16 +2,19 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 18:18:00
+ * @modify date 2019-09-12 23:48:15
  * @desc [description]
  */
 
 #region USINGS
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 #endregion
+
 
 public class IPaperMenu : MonoBehaviour
 {
@@ -19,9 +22,8 @@ public class IPaperMenu : MonoBehaviour
     [SerializeField] public GameObject Dropdown, ComputeButton, Title;
 
     private bool dropDownDataReady = false;
-    private int maxCharsToDisplay = 16;
-
-    Dictionary<string, string> xmlNames = new Dictionary<string, string>();
+    Dictionary<string, string> xmlNameMappingOffline    = new Dictionary<string, string>();
+    Dictionary<string, string> xmlNameMappingOnline     = new Dictionary<string, string>();
 
     // After height computation, prepare the dropdown list of XML files and change the title text.
     void Update() {
@@ -32,55 +34,54 @@ public class IPaperMenu : MonoBehaviour
             enabled = false;
         }
     }
-    
 
     /* 
-    * This function is used to get all .xml files from the StreamingAssets folder and adding them as
-    * options to the TMP_Dropdown menu.
+    * This function is used to get all .xml files from the StreamingAssets folder and from the URL. 
+    * Further adding them as options to the TMP_Dropdown menu.
     */
-    void Prep()
+    private void Prep()
     {
-        // If the XML data is loaded from an URL instead, jump out of here.
-        if (Config.URLUSED)
-        {
-            // Instantiate the POV Object.
-            var pov = Instantiate((GameObject) Resources.Load("Prefabs/PointOfView", typeof(GameObject)));
-            pov.transform.position = new Vector3(0, Config.GRAPH_HEIGHT, 0);
+        // Get all .xml files from the streamingAssets directory. (Offline)
+        var infoAssetsDir   = new DirectoryInfo(UnityEngine.Application.streamingAssetsPath);
+        var fileInfos       = infoAssetsDir.GetFiles("*.xml", SearchOption.AllDirectories);
 
-            gameObject.SetActive(false);
-            return;
-        }
-
-
-        // Get all .xml files from the streamingAssets directory.
-        var infoAssetsDir   = new DirectoryInfo(Application.streamingAssetsPath);
-        var xmlFiles        = infoAssetsDir.GetFiles("*.xml", SearchOption.AllDirectories);
         var optionData      = new List<TMP_Dropdown.OptionData>();
+        var maxChars        = Config.MAX_DISPLAYED_CHARS;
 
-        // If there are no xml files, display it to the user.
-        if (xmlFiles.Length == 0)
-        {
-            ComputeButton.SetActive(false);
-            Dropdown.SetActive(false);
-            Title.GetComponent<TextMeshPro>().text = "There are no\nPapers in the\nStreamingAssets Folder.";
-            return;
+        
+        foreach (var fileInfo in fileInfos) {
+            var name = fileInfo.Name.Trim().Replace(".xml", "");
+            name = name.Length > maxChars - 1 ? name.Substring(0, maxChars) : name;
+            xmlNameMappingOffline.Add(name + "_off", fileInfo.Name.Trim());
+            optionData.Add(new TMP_Dropdown.OptionData(name + "_off"));
         }
 
-        // Add all those files as TMP_Dropdown Options.
-        foreach (var xmlFile in xmlFiles)
-        {   // Remove the ".xml" part of the string and get min(15, string.length) of characters for the dropdown name.
-            var name = xmlFile.Name.Trim().Replace(".xml", "");
-            name = name.Length > 15 ? name.Substring(0, maxCharsToDisplay) : name;
+        // Now everything online.
+        StartCoroutine(GetRegisterContent(optionData));
+    }
 
-            // Add the shortened name and the actual file name, to be able to load the right file later on.
-            xmlNames.Add(name, xmlFile.Name.Trim());
-            optionData.Add(new TMP_Dropdown.OptionData(name));
+    private IEnumerator GetRegisterContent(List<TMP_Dropdown.OptionData> optionData) {
+        using(UnityWebRequest www = UnityWebRequest.Get(Config.URL + Config.REGNAME)) {
+            yield return www.SendWebRequest();
+            
+            var paperNames      = www.downloadHandler.text.Trim().Split(',');
+
+            foreach (var paper in paperNames) 
+            {
+                if (string.IsNullOrEmpty(paper)) {
+                    continue;
+                }
+                var name = paper.Trim().Replace(".xml", "");
+                name = name.Length > 15 ? name.Substring(0, Config.MAX_DISPLAYED_CHARS) : name;
+                xmlNameMappingOnline.Add(name, paper.Trim());
+                optionData.Add(new TMP_Dropdown.OptionData(name));
+            }
         }
 
         // Assign the options to the TMP_Dropdown.
         Dropdown.GetComponent<TMP_Dropdown>().options = optionData;
-
         dropDownDataReady = true;
+
     }
 
 
@@ -101,7 +102,16 @@ public class IPaperMenu : MonoBehaviour
         pov.transform.position = new Vector3(0, Config.GRAPH_HEIGHT, 0);
 
         // Pass the right Path to the POV Object and deactivate the PaperMenu object.
-        pov.GetComponent<IPointOfView>().Path = xmlNames[Dropdown.GetComponent<TMP_Dropdown>().captionText.text];
+        var selection = Dropdown.GetComponent<TMP_Dropdown>().captionText.text;
+        if (xmlNameMappingOffline.ContainsKey(selection)) {
+            Config.URLUSED = false;
+            pov.GetComponent<IPointOfView>().Path = xmlNameMappingOffline[selection];
+        } else {
+            Config.URLUSED = true;
+            Config.XMLNAME = xmlNameMappingOnline[selection];
+            pov.GetComponent<IPointOfView>().Path = xmlNameMappingOnline[selection];
+        }
+
         gameObject.SetActive(false);
     }
 }

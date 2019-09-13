@@ -2356,7 +2356,7 @@ GameObject:
   - component: {fileID: 3656622984471620538}
   - component: {fileID: 8543195704922579502}
   m_Layer: 0
-  m_Name: SciGraoh
+  m_Name: SciGraph
   m_TagString: Deactivate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

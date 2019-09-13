@@ -2,7 +2,7 @@
  * @author [Brendon Sutaj]
  * @email [s9brendon.sutaj@gmail.com]
  * @create date 2019-04-01 12:00:00
- * @modify date 2019-08-27 18:14:20
+ * @modify date 2019-09-12 23:56:04
  * @desc [description]
  */
 
@@ -48,11 +48,13 @@ public class IInfoPanel : MonoBehaviour
         var keyWords    = Paper.Keywords;
 
         // If any of these essential infos is missing, deactivate the PaperInfo Button.
+        /*
         if (title == null || abs == null || authors == null || year == null)
         {
             transform.parent.transform.Find("Menu/PaperInfo").gameObject.SetActive(false);
             return;
         }
+        */
 
         var keyAbsent = string.IsNullOrEmpty(keyWords);
         var typAbsent = string.IsNullOrEmpty(typology);
